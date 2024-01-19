@@ -1,0 +1,38 @@
+{% extends 'temp/pharmacy_free.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<center>
+	<h2>Medicine</h2>
+	<form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+		<table>
+             <tr>
+				<td>image</td>
+				<td><input type="file" name="img" value="{{ x.image }}"></td>
+			</tr>
+			<tr>
+				<td>name</td>
+				<td><input type="text" name="name" value="{{ x.name }}"></td>
+			</tr>
+			<tr>
+				<td>details</td>
+				<td><input type="text" name="details" value="{{ x.description }}"></td>
+			</tr>
+            <tr>
+				<td>price</td>
+				<td><input type="text" name="price" value="{{ x.price }}"></td>
+			</tr>
+		</table>
+                    <button class="btn btn-outline-secondary"><a href="/medicine/manage_medicine/">Cancel</a> </button>
+                    <button class="btn btn-outline-primary">Submit</button>
+
+	</form>
+</center>
+</body>
+</html>
+{% endblock %}

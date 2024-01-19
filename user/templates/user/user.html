@@ -1,0 +1,51 @@
+{% extends 'temp/user_free.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<center>
+	<h2>User</h2>
+	<form method="post">
+        {% csrf_token %}
+		<table>
+			<tr>
+				<td>name</td>
+				<td><input type="text" name="name" required></td>
+			</tr>
+			<tr>
+				<td>age</td>
+				<td><input type="text" name="age" required></td>
+			</tr>
+			<tr>
+				<td>password</td>
+				<td><input type="password" name="pwd" required></td>
+			</tr>
+			<tr>
+				<td>address</td>
+				<td><textarea required name="address" rows="5" cols="20" placeholder="House Name&#10street&#10Place District&#10Post&#10PIN"></textarea> </td>
+			</tr>
+			<tr>
+				<td>Gender</td>
+				<td><input type="radio" name="gender" value="male">Male
+					<input type="radio" name="gender" value="female">Female
+				    <input type="radio" name="gender" value="others">Others
+				</td>
+			</tr>
+			<tr>
+				<td>phone</td>
+				<td><input type="text" name="phone" required></td>
+			</tr>
+			<tr>
+				<td>email</td>
+				<td><input type="text" name="email" required></td>
+			</tr>
+		</table>
+        <button class="btn btn-outline-primary">Register</button>
+	</form>
+</center>
+</body>
+</html>
+{% endblock %}

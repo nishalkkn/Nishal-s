@@ -1,0 +1,33 @@
+
+{% extends 'temp/user_free.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<center>
+		<h1>doctor view appointment</h1>
+		<table border="1" class="table table-striped table-bordered">
+			<tr>
+				<th>Doctor</th>
+				<th>date</th>
+				<th>time</th>
+				<th>status</th>
+			</tr>
+            {% for i in x %}
+			<tr>
+				<td>{{ i.doctor.name }}</td>
+				<td>{{ i.date }}</td>
+				<td>{{ i.time }}</td>
+				<td>{{ i.status }}</td>
+			</tr>
+            {% endfor %}
+		</table>
+                <button class="btn btn-outline-primary"><a href="/temp/user/">Cancel</a> </button>
+
+	</center>
+</body>
+</html>
+{% endblock %}

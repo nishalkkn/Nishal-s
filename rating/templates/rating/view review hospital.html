@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<center>
+		<h1>view review hospital</h1>
+		<table border="2">
+
+			<tr>
+				<th>review</th>
+				<th>rating</th>
+				<th>date</th>
+				<th>time</th>
+			</tr>
+             {% for i in x %}
+			<tr>
+				<td>{{ i.review }}</td>
+				<td>{{ i.rating }}</td>
+				<td>{{ i.date }}</td>
+				<td>{{ i.time }}</td>
+			</tr>
+            {% endfor %}
+		</table>
+	</center>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{% extends 'temp/user_free.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<center>
+    <h2>Ratng</h2>
+    <form method="post">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>rating</td>
+                <td><input type="text" name="rating"></td>
+            </tr>
+             <tr>
+                <td>review</td>
+                <td><input type="text" name="rv"></td>
+            </tr>
+        </table>
+                        <button class="btn btn-outline-secondary"><a href="/temp/user/">Cancel</a> </button>
+                <button class="btn btn-outline-primary">Submit </button>
+
+    </form>
+</center>
+</body>
+</html>
+{% endblock %}

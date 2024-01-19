@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<center>
+	<h1>manage user</h1>
+	<table border="2">
+
+		<tr>
+			<th>user name</th>
+			<th>phone no</th>
+			<th>address</th>
+		</tr>
+         {% for i in x %}
+		<tr>
+			<td>{{ i.name }}</td>
+			<td>{{ i.phone_no }}</td>
+			<td>{{ i.address }}</td>
+            <td><a href="/user/update/{{ i.user_id }}">Update</a></td>
+            <td><a href="/user/delete/{{ i.user_id }}">Delete</a></td>
+		</tr>
+        {% endfor %}
+	</table>
+</center>
+</body>
+</html>

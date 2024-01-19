@@ -1,0 +1,33 @@
+{% extends 'temp/admin_free.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<center>
+	<h1>view reply</h1>
+	<table border="1" class="table table-striped table-bordered">
+
+		<tr>
+			<th>review</th>
+			<th>rating</th>
+			<th>date</th>
+			<th>time</th>
+		</tr>
+        {% for i in x %}
+		<tr>
+			<td>{{ i.review }}</td>
+			<td>{{ i.rating }}</td>
+			<td>{{ i.date }}</td>
+			<td>{{ i.time }}</td>
+		</tr>
+        {% endfor %}
+	</table>
+        <button class="btn btn-outline-primary"><a href="/temp/admin/">Go back</a> </button>
+
+</center>
+</body>
+</html>
+{% endblock %}

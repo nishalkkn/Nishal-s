@@ -1,0 +1,34 @@
+{% extends 'temp/doctor_free.html ' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<center>
+	<h2>prescription</h2>
+	<form method="post">
+		<table>
+			<tr>
+				<td>user name</td>
+				<td><input type="text" name="name"></td>
+			</tr>
+			<tr>
+				<td>prescription</td>
+				<td><input type="text" name="prescription"></td>
+			</tr>
+			<tr>
+				<td>disease</td>
+				<td><input type="text" name="disease"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" name="submit" value="upload" ></td>
+			</tr>
+		</table>
+	</form>
+</center>
+</body>
+</html>
+{% endblock %}

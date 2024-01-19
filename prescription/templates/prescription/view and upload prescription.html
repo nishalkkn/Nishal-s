@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mng</title>
+</head>
+<body>
+<center>
+	<h1>view upload prescription</h1>
+	<table border="2">
+
+		<tr>
+			<th>Username</th>
+			<th>Age</th>
+			<th>Gender</th>
+			<th>Phone no</th>
+            <th>Doctor</th>
+            <th>Prescription</th>
+		</tr>
+        {% for i in x %}
+		<tr>
+			<td>{{ i.user.name}}</td>
+			<td>{{ i.user.age }}</td>
+			<td>{{ i.user.gender }}</td>
+			<td>{{ i.user.phone_no }}</td>
+            <td>{{ i.doctor.name }}</td>
+            <td>{{ i.prescription }}</td>
+{#			<td><a href="">Upload</a></td>#}
+		</tr>
+        {% endfor %}
+	</table>
+</center>
+</body>
+</html>

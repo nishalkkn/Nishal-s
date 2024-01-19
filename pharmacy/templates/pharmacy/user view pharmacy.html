@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<center>
+	<h1>user view pharmacy</h1>
+	<table border="2">
+		<tr>
+			<th>pharmacy name</th>
+			<th>place</th>
+			<th>phone no</th>
+		</tr>
+        {% for i in x %}
+		<tr>
+			<td>{{ i.name }}</td>
+			<td>{{ i.address }}</td>
+			<td>{{ i.phone_no }}</td>
+		</tr>
+        {% endfor %}
+	</table>
+</center>
+</body>
+</html>

@@ -1,0 +1,46 @@
+{% extends 'temp/pharmacy_free.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<center>
+    <h2>Assign delivery agent</h2>
+    <form method="post">
+        {% csrf_token %}
+        <table>
+          <tr>
+            <td>Agent</td>
+            <td><select name="ag">
+                <option disabled selected>----------Select----------</option>
+                {% for i in x %}
+                    <option value="{{ i.agent_id }}">{{ i.name }}</option>
+                {% endfor %}
+            </select> </td>
+        </tr>
+         <tr>
+            <td>Order</td>
+            <td><select name="or" required>
+                <option disabled selected>----------Select----------</option>
+                {% for i in y %}
+                    <option value="{{ i.order_id }}">{{ i.order_id }}</option>
+                {% endfor %}
+            </select> </td>
+        </tr>
+
+            <tr>
+                <td>            <button class="btn btn-outline-secondary"><a href="/temp/pharmacy/">Cancel</a> </button>
+</td>
+                <td>
+                    <button value="submit" class="btn btn-outline-primary">submit</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</center>
+</body>
+</html>
+{% endblock %}

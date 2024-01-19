@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<center>
+		<h1>Manage Doctors</h1>
+		<table border="2">
+			<tr>
+				<th>name</th>
+				<th>age</th>
+				<th>gender</th>
+				<th>address</th>
+				<th>specialization</th>
+				<th>experience</th>
+				<th>email</th>
+				<th>phone no</th>
+			</tr>
+            {% for i in x %}
+			<tr>
+				<td>{{ i.name }}</td>
+				<td>{{ i.age }}</td>
+				<td>{{ i.gender }}</td>
+				<td>{{ i.address }}</td>
+				<td>{{ i.specialization }}</td>
+				<td>{{ i.experience }}</td>
+				<td>{{ i.email }}</td>
+				<td>{{ i.phone_no }}</td>
+				<td><a href="/doctor/update/{{ i.doctor_id }}">Update</a></td>
+				<td><a href="/doctor/delete/{{ i.doctor_id }}">Delete</a></td>
+			</tr>
+            {% endfor %}
+		</table>
+	</center>
+</body>
+</html>

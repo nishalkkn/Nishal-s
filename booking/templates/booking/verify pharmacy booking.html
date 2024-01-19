@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<center>
+	<h1>verify pharmacy booking</h1>
+	<table border="2">
+
+		<tr>
+			<th>Username</th>
+			<th>date</th>
+			<th>time</th>
+            <th>Status</th>
+		</tr>
+        {% for i in x %}
+		<tr>
+			<td>{{ i.user.name }}</td>
+			<td>{{ i.date }}</td>
+			<td>{{ i.time }}</td>
+            <td>{{ i.status }}</td>
+			<td><a href="/booking/apprv/{{ i.booking_id }}">Approve</a></td>
+			<td><a href="/booking/rjctt/{{ i.booking_id }}">Reject</a></td>
+		</tr>
+        {% endfor %}
+	</table>
+</center>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<center>
+	<h1>view and pay</h1>
+	<table border="2">
+
+		<tr>
+			<th>medicine name</th>
+			<th>quantity</th>
+			<th>price</th>
+		</tr>
+        {% for i in x %}
+		<tr>
+			<td>{{ i.medicine_id }}</td>
+			<td>{{ i.medicine_id }}</td>
+			<td>{{ i.medicine_id }}</td>
+{#			<td><a href="">Pay</a></td>#}
+		</tr>
+        {% endfor %}
+	</table>
+</center>
+</body>
+</html>

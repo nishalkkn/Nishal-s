@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<center>
+	<h1>View booking</h1>
+	<table border="2">
+		<tr>
+			<th>date</th>
+			<th>time</th>
+			<th>status</th>
+			<th>user name</th>
+		</tr>
+        {% for i in x %}
+		<tr>
+			<td>{{ i.date }}</td>
+			<td>{{ i.time }}</td>
+			<td>{{ i.status }}</td>
+			<td>{{ i.user.name }}</td>
+		</tr>
+        {% endfor %}
+	</table>
+</center>
+</body>
+</html>

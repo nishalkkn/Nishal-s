@@ -1,0 +1,35 @@
+{% extends 'temp/pharmacy_free.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<center>
+	<h1>View payment</h1>
+	<table border="1" class="table table-striped table-bordered">
+
+		<tr>
+
+			<th>amount</th>
+			<th>time</th>
+			<th>date</th>
+			<th>user name</th>
+            <th>Status</th>
+		</tr>
+          {% for i in x %}
+		<tr>
+			<td>{{ i.amount }}</td>
+			<td>{{ i.time }}</td>
+			<td>{{ i.date }}</td>
+			<td>{{ i.user.name }}</td>
+            <td>{{ i.status }}</td>
+
+		</tr>
+        {% endfor %}
+	</table>
+</center>
+</body>
+</html>
+{% endblock %}

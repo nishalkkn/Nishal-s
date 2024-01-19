@@ -1,0 +1,45 @@
+{% extends 'temp/pharmacy_free.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View orders</title>
+</head>
+<body>
+<center>
+<form method="post">
+{% csrf_token %}
+	<h1>View orders</h1>
+	<table border="1" class="table table-striped table-bordered">
+		<tr>
+            <th>order id</th>
+            <th>Username</th>
+            <th>Medicine</th>
+            <th>quantity</th>
+            <th>amount</th>
+			<th>status</th>
+            <th></th>
+		</tr>
+        {% for i in a %}
+		<tr>
+        <td>{{ i.order_id }}</td>
+            <td>{{ i.user.name }}</td>
+			<td>{{ i.medicine.name }}</td>
+            <td>{{ i.quantity }}</td>
+            <td>{{ i.amount }}</td>
+            <td>{{ i.status }}</td>
+            <td>
+                <a href="/order/accept/{{ i.order_id }}">Accept</a>
+                <a href="/order/reject/{{ i.order_id }}">Reject</a>
+            </td>
+		</tr>
+        {% endfor %}
+	</table>
+            <button class="btn btn-outline-primary"><a href="/temp/pharmacy/">Cancel</a> </button>
+
+</form>
+</center>
+</body>
+</html>
+{% endblock %}

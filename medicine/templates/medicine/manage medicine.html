@@ -1,0 +1,30 @@
+{% extends 'temp/pharmacy_free.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<center>
+	<h1>manage madicine</h1>
+	<table border="1"  class="table table-bordered table-striped">
+		<tr>
+			<th>name</th>
+			<th>details</th>
+            <th>Image</th>
+		</tr>
+        {% for i in x %}
+		<tr>
+			<td>{{ i.name }}</td>
+			<td>{{ i.description }}</td>
+			<td><a href="/medicine/update/{{ i.medicine_id }}">Update</a>
+			<a href="/medicine/delete/{{ i.medicine_id }}">delete</a></td>
+		</tr>
+        {% endfor %}
+	</table>
+            <button class="btn btn-outline-primary"><a href="/temp/pharmacy/">Cancel</a> </button>
+</center>
+</body>
+</html>
+{% endblock %}

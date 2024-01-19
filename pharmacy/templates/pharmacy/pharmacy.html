@@ -1,0 +1,42 @@
+{% extends 'temp/admin_free.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<center>
+	<h2>Pharmacy</h2>
+	<form method="post">
+        {% csrf_token %}
+		<table>
+			<tr>
+				<td>name</td>
+				<td><input type="text" name="name"></td>
+			</tr>
+            <tr>
+				<td>Email</td>
+				<td><input type="email" name="email"></td>
+			</tr>
+			<tr>
+				<td>address</td>
+				<td><textarea name="address" rows="5" cols="20" placeholder="street&#10Place District&#10Post&#10PIN"></textarea> </td>
+		    </tr>
+		    <tr>
+		    	<td>phone no</td>
+		    	<td><input type="text" name="phno"></td>
+		    </tr>
+		    <tr>
+		    	<td>password</td>
+		    	<td><input type="password" name="pwd"></td>
+		    </tr>
+		</table>
+        <br>
+        <button class="btn btn-outline-primary"><a href="/temp/admin/">Cancel</a> </button>
+        <button class="btn btn-primary">Register</button>
+	</form>
+</center>
+</body>
+</html>
+{% endblock %}

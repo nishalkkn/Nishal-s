@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<center>
+		<h1>doctor view appointment</h1>
+		<table border="2">
+			<tr>
+				<th>user name</th>
+				<th>date</th>
+				<th>time</th>
+				<th>status</th>
+			</tr>
+            {% for i in x %}
+			<tr>
+				<td>{{ i.user.name }}</td>
+				<td>{{ i.date }}</td>
+				<td>{{ i.time }}</td>
+				<td>{{ i.status }}</td>
+			</tr>
+            {% endfor %}
+		</table>
+	</center>
+</body>
+</html>
